@@ -496,7 +496,7 @@ QWeb2.Engine = (function() {
                         target,
                         error_msg = "Error while extending template '" + template;
                     if (jquery) {
-                        target = jQuery(jquery, template_dest);
+                        target = jQuery(jquery, template_dest).addBack(jquery);
                         if (!target.length && window.console) {
                             console.debug('Can\'t find "'+jquery+'" when extending template '+template);
                         }
